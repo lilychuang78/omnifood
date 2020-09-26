@@ -1,3 +1,6 @@
+/*----------------------------------*/
+/*BASIC SETUP*/
+/*----------------------------------*/
 *{
     margin: 0;
     padding: 0;
@@ -13,26 +16,15 @@ html{
     text-rendering: optimizeLegibility;
 }
 
+/*----------------------------------*/
+/*REUSABLE COMPONETNS*/
+/*----------------------------------*/
 .row{
     max-width: 1140px;
     margin: 0 auto;
 }
 
-header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*make the pic darker*/
-    background-size: cover; /*to see the whole picture*/
-    background-position: center;
-    height: 100vh; /*vh: veiw port*/
-}
-
-.hero-text-box{  /*make the text box center in the picture*/
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
+/*-----HEADINGS-----*/
 h1{
     margin-top: 0;
     margin-bottom: 20px;
@@ -44,6 +36,7 @@ h1{
     word-spacing: 4px;
 }
 
+/*-----BUTTONS-----*/
 .btn:link, /*link element in normal state*/
 .btn:visited /*link element when visited*/
 {
@@ -83,4 +76,22 @@ h1{
 .btn-ghost:active{
     border: 1px solid #cf6d17;
     color: #fff;
+}
+
+/*----------------------------------*/
+/*HEADER*/
+/*----------------------------------*/
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*make the pic darker*/
+    background-size: cover; /*to see the whole picture*/
+    background-position: center;
+    height: 100vh; /*vh: veiw port*/
+}
+
+.hero-text-box{  /*make the text box center in the picture*/
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
