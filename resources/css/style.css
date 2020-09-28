@@ -24,16 +24,69 @@ html{
     margin: 0 auto;
 }
 
+section{
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+
 /*-----HEADINGS-----*/
+h1,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
 h1{
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
     font-size: 240%; /*240% of 20px in html global font size*/
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after{ /*things display after the h2*/
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+/*-----PARAGRAPHS-----*/
+.long-copy{
+    line-height: 145%;
+    width: 70%; /*this width and margin-left makes the text center*/
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%
+}
+
+/*-----ICONS-----*/
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
 }
 
 /*-----BUTTONS-----*/
@@ -129,4 +182,48 @@ header{
 .main-nav li a:hover,
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
+}
+
+/*----------------------------------*/
+/*FEATURES*/
+/*----------------------------------*/
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+/*----------------------------------*/
+/*MEALS*/
+/*----------------------------------*/
+.section-meals{
+    padding: 0;
+}
+
+.meals-showcase{
+    list-style: none; /*remove the bullet point in front of the list*/
+    width: 100%;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left; /*side by side*/
+    width: 25%; /*4 times 25% makes the full screen 100%*/
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden; /*hide the overflowed img*/
+    background-color: #000; /*make the img darker with opacity*/
+}
+
+.meal-photo img{
+    opacity: 0.7; /*make the img lighter*/
+    width: 100%; /*img is as wide as its container which is <figure>*/
+    height: auto;
+    transform: scale(1.15); /*the image will be 115% big*/
+}
+
+.meal-photo img:hover{
+    opacity: 1; /*make the img back to normal without opactiy*/
+    transform: scale(1.03); /*when hover the img goes back to 103% big*/
+    transition: transform 0.5s;
 }
